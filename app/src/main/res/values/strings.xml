@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">adapters</string>
+    <string name="label_converter_square">Площадь</string>
+    <string name="sq_m">Квадратные метры</string>
+    <string name="sq_km">Квадратные километры</string>
+    <string name="sq_sm">Квадратные сантиметры</string>
+    <string name="sq_ga">Гектары</string>
+
+    <string name="label_converter_length">Длина</string>
+    <string name="m">Метр</string>
+    <string name="km">Километр</string>
+    <string name="mi">Миля</string>
+    <string name="sm">Сантиметр</string>
+    <string name="mm">Милиметр</string>
+    <string name="mmm">Микрометр</string>
+</resources>
