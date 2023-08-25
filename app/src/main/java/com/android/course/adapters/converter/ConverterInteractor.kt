@@ -1,4 +1,4 @@
-package com.android.course.adapters
+package com.android.course.adapters.converter
 
 class ConverterInteractor {
 

@@ -1,14 +1,20 @@
-package com.android.course.adapters
+package com.android.course.adapters.adapters
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.android.course.adapters.converter.Quantity
+import com.android.course.adapters.R
+import com.android.course.adapters.activity.ConverterActivity
 
-class MainRecyclerViewAdapter(private val quantitiesList: List<Quantity>) :
-    RecyclerView.Adapter<MainRecyclerViewAdapter.MainRecyclerViewHolder>() {
-    private var onClickListener: RecyclerVIewItemOnClickListener? = null
+class MainRecyclerViewAdapter(
+    private val quantitiesList: List<Quantity>,
+    private val context: Context
+) : RecyclerView.Adapter<MainRecyclerViewAdapter.MainRecyclerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainRecyclerViewHolder {
         val view: View = LayoutInflater.from(parent.context)
@@ -23,12 +29,10 @@ class MainRecyclerViewAdapter(private val quantitiesList: List<Quantity>) :
         holder.textView.text = holder.textView.resources.getString(quantitiesList[position].label)
 
         holder.textView.setOnClickListener {
-            if (onClickListener != null) onClickListener!!.onClick()
+            val intent = Intent(context, ConverterActivity::class.java)
+            intent.putExtra("units", quantitiesList[position].convertUnits)
+            context.startActivity(intent)
         }
-    }
-
-    fun setOnClickItemListener(onClickListener: RecyclerVIewItemOnClickListener) {
-        this.onClickListener = onClickListener
     }
 
     class MainRecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

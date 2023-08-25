@@ -1,4 +1,4 @@
-package com.android.course.adapters
+package com.android.course.adapters.converter
 
 import android.os.Parcelable
 import androidx.annotation.StringRes
@@ -15,5 +15,5 @@ data class ConverterUnit(@StringRes val label: Int, val toBaseRate: Double) : Pa
 }
 
 @Parcelize
-data class Quantity(@StringRes val label: Int, val convertUnits: List<ConverterUnit>) : Parcelable
+data class Quantity(@StringRes val label: Int, val convertUnits: ArrayList<ConverterUnit>) : Parcelable
 

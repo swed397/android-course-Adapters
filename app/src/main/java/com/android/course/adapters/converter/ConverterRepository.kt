@@ -1,11 +1,13 @@
-package com.android.course.adapters
+package com.android.course.adapters.converter
+
+import com.android.course.adapters.R
 
 class ConverterRepository {
 
-    val availableQuantities: List<Quantity> = listOf(
+    val availableQuantities: List<Quantity> = arrayListOf(
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -14,7 +16,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -25,7 +27,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -34,7 +36,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -45,7 +47,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -54,7 +56,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -65,7 +67,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -74,7 +76,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -85,7 +87,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -94,7 +96,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -105,7 +107,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -114,7 +116,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -125,7 +127,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -134,7 +136,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -145,7 +147,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -154,7 +156,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -165,7 +167,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -174,7 +176,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -185,7 +187,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -194,7 +196,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -205,7 +207,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -214,7 +216,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -225,7 +227,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -234,7 +236,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -245,7 +247,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -254,7 +256,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -265,7 +267,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -274,7 +276,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -285,7 +287,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -294,7 +296,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -305,7 +307,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -314,7 +316,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -325,7 +327,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -334,7 +336,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -345,7 +347,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -354,7 +356,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -365,7 +367,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -374,7 +376,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -385,7 +387,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -394,7 +396,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -405,7 +407,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -414,7 +416,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -425,7 +427,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -434,7 +436,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -445,7 +447,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -454,7 +456,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -465,7 +467,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -474,7 +476,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),
@@ -485,7 +487,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_square,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.sq_m, 1.0),
                 ConverterUnit(R.string.sq_km, 1000000.0),
                 ConverterUnit(R.string.sq_sm, 0.0001),
@@ -494,7 +496,7 @@ class ConverterRepository {
         ),
         Quantity(
             R.string.label_converter_length,
-            listOf(
+            arrayListOf(
                 ConverterUnit(R.string.m, 1.0),
                 ConverterUnit(R.string.km, 1000.0),
                 ConverterUnit(R.string.mi, 1609.344),

@@ -4,6 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConverterActivity">
+    android:background="@color/purple"
+    tools:context=".activity.ConverterActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/converter_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="32dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    />
 </LinearLayout>
