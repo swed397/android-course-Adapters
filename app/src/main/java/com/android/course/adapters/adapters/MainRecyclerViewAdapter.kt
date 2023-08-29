@@ -1,19 +1,16 @@
 package com.android.course.adapters.adapters
 
-import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.android.course.adapters.converter.Quantity
 import com.android.course.adapters.R
-import com.android.course.adapters.activity.ConverterActivity
+import com.android.course.adapters.converter.Quantity
 
 class MainRecyclerViewAdapter(
     private val quantitiesList: List<Quantity>,
-    private val context: Context
+    private val onClickMainRecycler: (position: Int) -> Unit
 ) : RecyclerView.Adapter<MainRecyclerViewAdapter.MainRecyclerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainRecyclerViewHolder {
@@ -26,20 +23,20 @@ class MainRecyclerViewAdapter(
     override fun getItemCount(): Int = quantitiesList.size
 
     override fun onBindViewHolder(holder: MainRecyclerViewHolder, position: Int) {
-        holder.textView.text = holder.textView.resources.getString(quantitiesList[position].label)
-
-        holder.textView.setOnClickListener {
-            val intent = Intent(context, ConverterActivity::class.java)
-            intent.putExtra("units", quantitiesList[position].convertUnits)
-            context.startActivity(intent)
-        }
+        holder.bind(position)
     }
 
-    class MainRecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textView: TextView
+    inner class MainRecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val textView: TextView by lazy { itemView.findViewById(R.id.main_recycler_view_item) }
 
         init {
-            textView = itemView.findViewById(R.id.main_recycler_view_item)
+            textView.setOnClickListener {
+                onClickMainRecycler.invoke(adapterPosition)
+            }
+        }
+
+        fun bind(position: Int) {
+            textView.text = textView.resources.getString(quantitiesList[position].label)
         }
     }
 }

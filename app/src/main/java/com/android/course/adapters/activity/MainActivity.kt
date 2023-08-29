@@ -1,5 +1,6 @@
 package com.android.course.adapters.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
@@ -13,13 +14,18 @@ import com.android.course.adapters.converter.ConverterRepository
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mainRecyclerView: RecyclerView
+    private lateinit var converterRepo: ConverterRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        converterRepo = ConverterRepository()
+
         val mainRecyclerViewAdapter =
-            MainRecyclerViewAdapter(ConverterRepository().availableQuantities, this)
+            MainRecyclerViewAdapter(converterRepo.availableQuantities) { pos ->
+                clickAction(pos)
+            }
 
         mainRecyclerView = findViewById(R.id.main_recycler_view)
         mainRecyclerView.adapter = mainRecyclerViewAdapter
@@ -36,5 +42,11 @@ class MainActivity : AppCompatActivity() {
             ) ?: throw RuntimeException("No such resources")
         )
         return dividerItemDecoration
+    }
+
+    private fun clickAction(pos: Int) {
+        val intent = Intent(this, ConverterActivity::class.java)
+        intent.putExtra("units", converterRepo.availableQuantities[pos].convertUnits)
+        startActivity(intent)
     }
 }

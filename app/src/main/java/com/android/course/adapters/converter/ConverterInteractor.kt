@@ -2,7 +2,7 @@ package com.android.course.adapters.converter
 
 class ConverterInteractor {
 
-    fun convert(converterValues: List<ConverterValue>): List<ConverterValue> {
+    fun convert(converterValues: List<ConverterValue>): ArrayList<ConverterValue> {
         val mutableValues = converterValues.toMutableList()
         val baseValue = mutableValues.removeFirst()
 
@@ -14,7 +14,7 @@ class ConverterInteractor {
         }
         mutableValues.sortBy { it.value }
         mutableValues.add(0, baseValue)
-        return mutableValues
+        return ArrayList(mutableValues)
     }
 
     fun startList(quantity: Quantity): List<ConverterValue> =
