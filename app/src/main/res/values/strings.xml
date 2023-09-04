@@ -13,4 +13,6 @@
     <string name="sm">Сантиметр</string>
     <string name="mm">Милиметр</string>
     <string name="mmm">Микрометр</string>
+
+    <string name="exception_divider">Микрометр</string>
 </resources>

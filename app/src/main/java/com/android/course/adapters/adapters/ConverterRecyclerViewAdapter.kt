@@ -12,10 +12,9 @@ import com.android.course.adapters.R
 import com.android.course.adapters.converter.ConverterValue
 
 class ConverterRecyclerViewAdapter(
-    private var converterValuesList: ArrayList<ConverterValue>,
+    private var converterValuesList: List<ConverterValue>,
     private val onFocus: (position: Int) -> Unit,
-    private val onChange: (position: Int, editText: EditText) -> Unit
-
+    private val onChange: (position: Int, text: String) -> Unit
 ) : RecyclerView.Adapter<ConverterRecyclerViewAdapter.ConverterRecyclerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ConverterRecyclerViewHolder {
@@ -31,9 +30,9 @@ class ConverterRecyclerViewAdapter(
         holder.bind(position)
     }
 
-    fun setData(newList: ArrayList<ConverterValue>) {
+    fun setData(newList: List<ConverterValue>) {
         val diffUtil = ConverterDiffUtil(converterValuesList, newList)
-        val diffResult = DiffUtil.calculateDiff(diffUtil)
+        val diffResult = DiffUtil.calculateDiff(diffUtil, true)
         diffResult.dispatchUpdatesTo(this)
         converterValuesList = newList
     }
@@ -43,14 +42,14 @@ class ConverterRecyclerViewAdapter(
         private val editText: EditText by lazy { itemView.findViewById(R.id.converter_recycler_edit_text) }
 
         init {
-            editText.setOnFocusChangeListener { _, hasFocus ->
+            editText.setOnFocusChangeListener { view, hasFocus ->
                 if (hasFocus) {
-                    onFocus.invoke(adapterPosition)
+                    onFocus.invoke(bindingAdapterPosition)
                 }
-
             }
+
             editText.addTextChangedListener {
-                onChange.invoke(adapterPosition, editText)
+                onChange.invoke(bindingAdapterPosition, editText.text.toString())
             }
         }
 
@@ -59,6 +58,22 @@ class ConverterRecyclerViewAdapter(
                 textView.resources.getString(converterValuesList[position].converterUnit.label)
             editText.setText(converterValuesList[position].value.toString())
         }
+    }
+
+    private class ConverterDiffUtil(
+        private val oldList: List<ConverterValue>,
+        private val newList: List<ConverterValue>,
+    ) : DiffUtil.Callback() {
+
+        override fun getOldListSize(): Int = oldList.size
+
+        override fun getNewListSize(): Int = newList.size
+
+        override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean =
+            oldList[oldItemPosition].converterUnit.label == newList[newItemPosition].converterUnit.label
+
+        override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean =
+            oldList[oldItemPosition].value == newList[newItemPosition].value
     }
 }
 

@@ -39,14 +39,18 @@ class MainActivity : AppCompatActivity() {
                 resources,
                 R.drawable.main_recycler_view_item_decorator,
                 null
-            ) ?: throw RuntimeException("No such resources")
+            ) ?: throw RuntimeException(getString(R.string.exception_divider))
         )
         return dividerItemDecoration
     }
 
     private fun clickAction(pos: Int) {
         val intent = Intent(this, ConverterActivity::class.java)
-        intent.putExtra("units", converterRepo.availableQuantities[pos].convertUnits)
+        intent.putExtra(KEY_UNITS, converterRepo.availableQuantities[pos].convertUnits)
         startActivity(intent)
+    }
+
+    companion object {
+        const val KEY_UNITS: String = "units"
     }
 }
